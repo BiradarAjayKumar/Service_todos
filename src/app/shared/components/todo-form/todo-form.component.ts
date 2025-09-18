@@ -30,6 +30,9 @@ if (this.todoForm.valid && this.todoForm.value.todoItem.trim() !== '') {
       } 
       this.todoForm.reset(); 
     } 
+    else {
+    alert('Please enter a valid todo item!');
+  }
   } 
 
   editTodo(todo: Itodo) {
