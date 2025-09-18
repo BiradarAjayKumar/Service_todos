@@ -2,7 +2,7 @@
 
 <form #todoForm="ngForm" (ngSubmit)="onAdd()">
 <div class="form-group">
-    <label for="todo">Add todoItem</label>
+    <label for="todo">{{ isEditing ? 'Edit' : 'Add' }}todoItem</label>
     <input type="text" ngModel name="todoItem" class="form-control">
     </div>
     <button class="btn btn-block btn-primary">Add</button>

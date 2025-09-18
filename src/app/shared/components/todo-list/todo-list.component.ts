@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Itodo } from '../../models/todos';
 import { TodosService } from '../../services/todos.service';
 
@@ -10,6 +10,8 @@ import { TodosService } from '../../services/todos.service';
 })
 export class TodoListComponent implements OnInit {
 todosArr:Array<Itodo>=[]
+@Output() edit = new EventEmitter<Itodo>();
+
   constructor(private _todoService:TodosService) { }
 
   ngOnInit(): void {
@@ -22,5 +24,8 @@ console.log(id);
 this._todoService.RemovePost(id)
     }
   }
+ onEdit(todo: Itodo) {
+    this.edit.emit(todo);
+  } 
 
 }

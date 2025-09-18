@@ -6,7 +6,7 @@
 {{todo.todoItem}}
         </strong>
         <div>
-            <button class="button btn btn-outline-info mr-2">EDIT</button>
+            <button (click)="onEdit(todo)" class="button btn btn-outline-info mr-2">EDIT</button>
             <button (click)="onRemove(todo.todoId)" class="button btn btn-outline-danger">Remove</button>
         </div>
     </li>

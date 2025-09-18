@@ -1,10 +1,10 @@
 <div class="container">
   <div class="class">
     <div class="col-md-6">
-      <app-todo-form></app-todo-form>
+      <app-todo-form #todoForm></app-todo-form>
     </div>
     <div class="col-md-6">
-      <app-todo-list></app-todo-list>
+      <app-todo-list (edit)="todoForm.editTodo($event)"></app-todo-list>
     </div>
   </div>
 </div>

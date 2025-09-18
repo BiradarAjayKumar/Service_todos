@@ -48,4 +48,11 @@ this._matsnack.open("todo item successfully removed","Close",matConfig);
 this.snackbarservice.openSnackbar(`todo item ${getobj.todoItem} removed successfully`);
     }
 
+    updateTodo(todo: Itodo) {
+  const index = this.todosArr.findIndex(t => t.todoId === todo.todoId);
+  if (index !== -1) {
+    this.todosArr[index] = todo;
+  }
+}
+
 }
