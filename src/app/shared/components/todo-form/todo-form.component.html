@@ -3,7 +3,7 @@
 <form #todoForm="ngForm" (ngSubmit)="onAdd()">
 <div class="form-group">
     <label for="todo">{{ isEditing ? 'Edit' : 'Add' }}todoItem</label>
-    <input type="text" ngModel name="todoItem" class="form-control">
+    <input type="text" required ngModel name="todoItem" class="form-control">
     </div>
     <button *ngIf="!isEditing" class="btn btn-block btn-primary">Add</button>
     <button *ngIf="isEditing" class="btn btn-block btn-primary">Update</button>
