@@ -19,7 +19,6 @@ isEditing:boolean=false;
   }
   onAdd(){
     if(this.studentForm.valid && this.studentForm.value!==""){
-     // let stdObj=this.studentForm.value;
      let stdObj={
       ...this.studentForm.value,
       contact:this.studentForm.controls['contact'].value,

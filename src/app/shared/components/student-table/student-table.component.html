@@ -19,8 +19,8 @@
             <td>{{student.contact}}</td>
             <td>{{student.email}}</td>
             <td>{{student.gender}}</td>
-            <td><button (click)="onEdit(student)" class="btn btn-outline-info">Edit</button></td>
-            <td><button (click)="onRemove(student)" class="btn btn-outline-danger">Remove</button></td>
+            <td><button (click)="onEdit(student)"  [disabled]="isRemoving" class="btn btn-outline-info">Edit</button></td>
+            <td><button (click)="onRemove(student)"  [disabled]="isEditing" class="btn btn-outline-danger">Remove</button></td>
         </tr>
     </tbody>
     </table>
