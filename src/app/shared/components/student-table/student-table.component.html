@@ -1,0 +1,29 @@
+<table class="table" *ngIf="studentArr.length > 0 ; else nostudentdetails">
+    <thead>
+        <tr>
+            <th>sr.no</th>
+        <th>fname</th>
+        <th>lname</th>
+        <th>contact</th>
+        <th>email</th>
+        <th>gender</th>
+        <th>Edit</th>
+        <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of studentArr; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{student.fname}}</td>
+            <td>{{student.lname}}</td>
+            <td>{{student.contact}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.gender}}</td>
+            <td><button (click)="onEdit(student)" class="btn btn-outline-info">Edit</button></td>
+            <td><button (click)="onRemove(student)" class="btn btn-outline-danger">Remove</button></td>
+        </tr>
+    </tbody>
+    </table>
+    <ng-template #nostudentdetails>
+        <p class="alert alert-info">No student Details</p>
+    </ng-template>

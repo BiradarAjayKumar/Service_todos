@@ -1,0 +1,21 @@
+
+
+<form #studentForm="ngForm" (ngSubmit)="isEditing ? onUpdate() : onAdd()">
+    <div class="form-group">
+        <label for="fname">fname</label>
+        <input type="text" ngModel required class="form-control" name="fname">
+         <label for="fname">lname</label>
+        <input type="text" ngModel required class="form-control" name="lname">
+         <label for="fname">contact</label>
+        <input type="text" ngModel required class="form-control" name="contact">
+         <label for="fname">email</label>
+        <input type="text" ngModel required class="form-control" name="email">
+         <label for="fname">gender</label>
+        <input type="text" ngModel required class="form-control" name="gender">
+    </div>
+    <div>
+        <button *ngIf="!isEditing" class="btn btn-primary">Submit</button>
+        <button *ngIf="isEditing" class="btn btn-primary">Update</button>
+    </div>
+
+</form>
